@@ -9,4 +9,13 @@ const motivationalPhrases = ["Keep coding, you're making progress!", "Every line
 // Goodbyes
 const goodbyes = ["Goodbye", "Farewell", "See you later", "Bye", "Take care", "Adios", "So long", "Catch you later", "See you soon", "Have a great day"];
 
+// Code 
 
+function messageGenerator(){
+    const randomNumberGreeting = Math.floor(Math.random()*greetings.length);
+    const randomNumberMessage = Math.floor(Math.random()*motivationalPhrases.length);
+    const randomNumberGoodbyes = Math.floor(Math.random()*goodbyes.length);
+    return `${greetings[randomNumberGreeting]} \n The quote for today is: \n ${motivationalPhrases[randomNumberMessage]} \n ${goodbyes[randomNumberGoodbyes]}`;
+}
+
+console.log(messageGenerator());
